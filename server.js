@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 var port     = process.env.PORT || 8080; // set our port
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://Macrofono:Macropollo8@ds055690.mongolab.com:55690/bears'); // connect to our database
+mongoose.connect('mongodb://heroku_app32092219:uk8uac8sgnpqbbk8nii45lhdus@ds061370.mongolab.com:61370/heroku_app32092219'); // connect to our database
 var Bear     = require('./app/models/bear');
 
 // ROUTES FOR OUR API
