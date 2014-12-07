@@ -1,14 +1,14 @@
 // BASE SETUP
 // =============================================================================
 
-// call the packages we needddddd
+// call the packages we needdddddsss
 var express    = require('express');
 var bodyParser = require('body-parser');
 var app        = express();
 var morgan     = require('morgan');
 
 // configure app
-app.use(morgan('dev')); // log requests to the console
+app.use(morgan('dev')); /// log requests to the console
 
 // configure body parser
 app.use(bodyParser.urlencoded({ extended: true }));
