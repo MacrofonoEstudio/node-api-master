@@ -11,9 +11,11 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://heroku_app32092219:uk8uac8sgnpqbbk8nii45lhdus@ds061370.mongolab.com:61370/heroku_app32092219'); // connect to our database
 var Bear     = require('./app/models/bear');
 
+var app = express();
+
 var routes = require('./app/routes/index');
 
-var app = express();
+
 
 // configure app
 app.use(morgan('dev')); /// log requests to the console

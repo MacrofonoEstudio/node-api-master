@@ -4,11 +4,12 @@ var express = require('express');
 
 // create our router
 var router = express.Router();
+var Bear     = require('../models/bear');
 
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-	res.send('<h1>message hooray! welcome to our api!</h1>');
+	res.send('<form action="/bears" method="POST" target="_blank" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded">First name:<br><input type="text" name="name" value=""><br><input type="submit" value="Submit"></form>');
 });
 
 // on routes that end in /bears
@@ -83,3 +84,5 @@ router.route('/bears/:bear_id')
 			res.json({ message: 'Successfully deleted' });
 		});
 	});
+
+module.exports = router;	
